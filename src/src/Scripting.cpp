@@ -6569,6 +6569,20 @@ static cell AMX_NATIVE_CALL Natives::SetPickupStreamingEnabled(AMX *amx, cell *p
 #endif
 
 
+// native CreatePlayerActor(playerid, int skin, float x, float y, float z, float rot);
+static cell AMX_NATIVE_CALL Natives::CreatePlayerActor(AMX *amx, cell *params)
+{
+	// If unknown server version
+	if (!pServer)
+		return 0;
+
+	CHECK_PARAMS(6, "CreatePlayerActor");
+
+	int playerid = static_cast<int>(params[1]);
+	if (!IsPlayerConnectedEx(playerid)) return 0;
+	return static_cast<cell>(pServer->pPlayerActorPool->AddForPlayer(playerid, static_cast<int>(params[2]), CVector(amx_ctof(params[3]), amx_ctof(params[4]), amx_ctof(params[5])), amx_ctof(params[6])));
+}
+
 // And an array containing the native function-names and the functions specified with them
 AMX_NATIVE_INFO YSINatives [] =
 {
@@ -6959,6 +6973,10 @@ AMX_NATIVE_INFO RedirectedNatives[] =
 	{ "SetPlayerSkin",					Natives::YSF_SetPlayerSkin },
 	{ "SetPlayerName",					Natives::YSF_SetPlayerName },
 	{ "SetPlayerFightingStyle",			Natives::YSF_SetPlayerFightingStyle },
+
+	// Player actors
+	{ "CreatePlayerActor",				Natives::CreatePlayerActor },
+
 	{ 0,								0 }
 };
 

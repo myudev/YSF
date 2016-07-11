@@ -134,6 +134,7 @@ using sampgdk::logprintf;
 #include "CGangZonePool.h"
 #include "CModelSizes.h"
 #include "CPickupPool.h"
+#include "CPlayerActorPool.h"
 #include "CPlayerData.h"
 #include "CVector.h"
 #include "Functions.h"

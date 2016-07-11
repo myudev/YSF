@@ -827,6 +827,7 @@ void InstallPostHooks()
 
 	// Recreate pools
 	pServer->pGangZonePool = new CGangZonePool();
+	pServer->pPlayerActorPool = new CPlayerActorPool();
 
 #ifdef NEW_PICKUP_SYSTEM
 	// Recreate Pickup pool

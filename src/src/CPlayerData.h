@@ -129,6 +129,7 @@ public:
 	PickupMap PlayerPickups;
 	std::bitset<MAX_PICKUPS> bPlayerPickup;
 #endif
+	ActorMap PlayerActors;
 	DWORD dwFakePingValue;
 	DWORD dwLastUpdateTick;
 	DWORD dwCreateAttachedObj;

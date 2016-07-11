@@ -389,6 +389,8 @@ namespace Natives
 #endif
 	static cell AMX_NATIVE_CALL FIXED_GetWeaponName(AMX *amx, cell *params);
 	static cell AMX_NATIVE_CALL FIXED_IsPlayerConnectedEx(AMX *amx, cell *params);
+
+	static cell AMX_NATIVE_CALL CreatePlayerActor(AMX *amx, cell *params);
 };
 
 int InitScripting(AMX *amx);

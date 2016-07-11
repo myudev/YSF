@@ -82,6 +82,10 @@ void CServer::Process()
 			// Process player
 			pPlayerData[playerid]->Process();
 		}
+
+		if (pServer->pPlayerActorPool)
+			pServer->pPlayerActorPool->Process();
+
 #ifdef NEW_PICKUP_SYSTEM
 		if(pServer->pPickupPool)
 			pServer->pPickupPool->Process();

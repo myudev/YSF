@@ -5,6 +5,19 @@
 int RPC_Gravity = 0x92;
 int RPC_Weather = 0x98;
 
+// actors
+int RPC_WorldActorAdd = 171;
+int RPC_WorldActorRemove = 172;
+
+int RPC_ActorApplyAnimation = 173; // bitstream parameters: same as RPC_ScrApplyAnimation but with actorid
+
+int RPC_ActorSetRotation = 175; // bitstream parameters: ushort actorid, float rot - myu
+int RPC_ActorSetPos = 176; // bitstream parameters: ushort actorid, float x, float y, float z - myu
+
+// INFO: there's no ActorInvulnerable "RPC" as it seems (just restream with param)
+int RPC_ActorSetHealth = 178; // bitstream parameters: ushort actorid, float health - myu
+
+// pickups
 int RPC_CreatePickup = 95;
 int RPC_DestroyPickup = 63;
 

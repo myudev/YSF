@@ -33,6 +33,9 @@
 #ifndef YSF_RPCS_H
 #define YSF_RPCS_H
 
+extern int RPC_WorldActorAdd;
+extern int RPC_WorldActorRemove;
+
 extern int RPC_Gravity;
 extern int RPC_Weather;
 extern int RPC_CreatePickup;

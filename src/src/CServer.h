@@ -10,6 +10,7 @@ class CYSFPickupPool;
 
 #include "Addresses.h"
 #include "CGangZonePool.h"
+#include "CPlayerActorPool.h"
 
 #include <vector>
 #include <set>
@@ -59,6 +60,7 @@ public:
 
 	CGangZonePool *pGangZonePool;
 	CYSFPickupPool *pPickupPool;
+	CPlayerActorPool *pPlayerActorPool;
 
 	std::map<int, CVehicleSpawn> vehicleSpawnData;
 	std::bitset<MAX_VEHICLES> bChangedVehicleColor;

@@ -4439,6 +4439,7 @@ inline bool SetObjectsDefaultCameraCol(bool disable) {
 #define MAX_3DTEXT_GLOBAL (1024)
 #define MAX_3DTEXT_PLAYER (1024)
 #define MAX_PICKUPS (4096)
+#define MAX_ACTORS (1000)
 #define INVALID_MENU (0xFF)
 #define INVALID_TEXT_DRAW (0xFFFF)
 #define INVALID_GANG_ZONE (-1)
